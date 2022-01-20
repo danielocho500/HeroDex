@@ -5,12 +5,22 @@ import { getRandomNumber } from "./getRandomNumber";
 export const getRandomHeroes = (amount = 10) => {
 
     const heroesTotal = [];
+    const indexes = []
 
-    for(let i=0;i<=amount;i++){
-        const num = getRandomNumber(1,731);
-        const hero = heroes[num];
+    for (let i = 0; i <= amount; i++) {
+        let hero = null
+        while (hero == null) {
+            const num = getRandomNumber(1, 731);
+            while (indexes.includes(num)) {
+                num = getRandomNumber(1, 731);
+            }
 
-        heroesTotal.push(hero);
+            indexes.push(num);
+
+            hero = heroes[num];
+
+            heroesTotal.push(hero);
+        }
     }
 
     return {

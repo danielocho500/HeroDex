@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useFetch } from '../../hooks/useFetch';
 import { Header } from '../basics/Header';
 import { Loading } from '../basics/Loading';
+import { HeroScreen } from './HeroScreen';
 
 
 export const HeroInfo = () => {
@@ -11,9 +12,7 @@ export const HeroInfo = () => {
 
     const stateFetch = useFetch(heroId);
 
-    const {loading, error , data } = stateFetch;
-
-    console.log(data)
+    const {loading, error, data } = stateFetch;
 
     return (
         <>
@@ -23,7 +22,7 @@ export const HeroInfo = () => {
                 {
                     loading ? <Loading/>
                             : (error != null || data.response == "error") ? <div className='alert alert-danger results__error'> {error ? error : "Hero not Found"} </div>
-                                : <p> {JSON.stringify(data)} </p>
+                                : <HeroScreen data={data}/>
                 }   
             </div>
         </>

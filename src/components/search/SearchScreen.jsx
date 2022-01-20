@@ -7,6 +7,7 @@ import './Search.css';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Header } from '../basics/Header';
 import { HeroList } from '../heroList/HeroList';
+import { Loading } from '../basics/Loading';
 
 export const SearchScreen = () => {
 
@@ -118,7 +119,7 @@ export const SearchScreen = () => {
         
         <div className="results__container">
             {
-                (heroesCall.loading) ? <div> Loading.... </div>
+                (heroesCall.loading) ? <Loading/>
                     : ((heroesCall.error != null ) ? <div className='alert alert-danger results__error'> {heroesCall.error} </div>
                     : <div> <HeroList heroes={heroesCall.data}/> </div>  
                 )      
