@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './heroList.css'
 
-export const HeroCard = ({name, biography, image}) => {
+export const HeroCard = ({name, biography, image, id}) => {
     const {url} = image
     const fullName = biography["full-name"]
 
@@ -15,7 +16,9 @@ export const HeroCard = ({name, biography, image}) => {
             <div className="card-body">
                 <h4 className='card-title'>  {name} </h4>
                 <p className='card-text'> {fullName} </p>
-                <a href="#" className="btn btn-primary">See more</a>
+                <Link to={`/hero/${id}`} className="btn btn-primary">
+                     See more
+                </Link>
             </div>
             
         </div>

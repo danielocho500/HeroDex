@@ -1,0 +1,10 @@
+.results__error{
+  font-size: large;
+  margin-top: 5rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.results__error:first-letter{
+  text-transform: capitalize;
+}

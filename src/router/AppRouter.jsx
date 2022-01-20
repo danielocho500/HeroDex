@@ -6,6 +6,8 @@ import {
     Route,
     useNavigate
   } from "react-router-dom"
+import { HeroInfo } from '../components/heroInfo/HeroInfo'
+
 import { SearchScreen } from '../components/search/SearchScreen'
 
 export const AppRouter = () => {
@@ -15,6 +17,7 @@ export const AppRouter = () => {
             <BrowserRouter>
                 <Routes>
                     <Route path='/' element={<SearchScreen/>} />
+                    <Route path='/hero/:heroId' element={<HeroInfo/>}/>
                 </Routes>
             </BrowserRouter>
         </>
