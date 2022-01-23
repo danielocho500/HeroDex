@@ -2,26 +2,31 @@ import { heroes } from "../data/heroes";
 import { getRandomNumber } from "./getRandomNumber";
 
 
-export const getRandomHeroes = (amount = 10) => {
+export const getRandomHeroes = (amount = 12) => {
 
     const heroesTotal = [];
-    const indexes = []
+    const indexes = [];
 
-    for (let i = 0; i <= amount; i++) {
+    for (let i = 1; i <= amount; i++) {
         let hero = null
-        while (hero == null) {
-            const num = getRandomNumber(1, 731);
+        let num = 1
+        while (!hero) {
+            num = getRandomNumber(1, 731);
             while (indexes.includes(num)) {
                 num = getRandomNumber(1, 731);
-            }
+            }    
 
             indexes.push(num);
 
             hero = heroes[num];
-
-            heroesTotal.push(hero);
         }
+
+        heroesTotal.push(hero);
+
+        
     }
+
+    console.log(heroesTotal);
 
     return {
         loading: false,

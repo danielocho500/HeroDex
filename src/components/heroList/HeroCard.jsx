@@ -10,6 +10,7 @@ export const HeroCard = ({name, biography, image, id}) => {
         <div className='card'>
             <img src={url} alt={name} className="card-img-top card__img"
                 onError={(e) => {
+                    console.log("dsad")
                     e.target.src = "assets/img/noPhoto.png"
                 }}
             />
