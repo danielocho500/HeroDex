@@ -3,8 +3,7 @@ import React from 'react'
 import {
     BrowserRouter,
     Routes,
-    Route,
-    useNavigate
+    Route
   } from "react-router-dom"
 import { HeroInfo } from '../components/heroInfo/HeroInfo'
 
@@ -17,6 +16,7 @@ export const AppRouter = () => {
             <BrowserRouter>
                 <Routes>
                     <Route path='/' element={<SearchScreen/>} />
+                    <Route path='/herodex' element={<SearchScreen/>} />
                     <Route path='/hero/:heroId' element={<HeroInfo/>}/>
                 </Routes>
             </BrowserRouter>

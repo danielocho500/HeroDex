@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useFetch } from '../../hooks/useFetch';
 import { Header } from '../basics/Header';
@@ -21,7 +21,7 @@ export const HeroInfo = () => {
             <div className="heroInfo__container">
                 {
                     loading ? <Loading/>
-                            : (error != null || data.response == "error") ? <div className='alert alert-danger results__error'> {error ? error : "Hero not Found"} </div>
+                            : (error != null || data.response === "error") ? <div className='alert alert-danger results__error'> {error ? error : "Hero not Found"} </div>
                                 : <HeroScreen data={data}/>
                 }   
             </div>

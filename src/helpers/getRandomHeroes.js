@@ -26,8 +26,6 @@ export const getRandomHeroes = (amount = 12) => {
         
     }
 
-    console.log(heroesTotal);
-
     return {
         loading: false,
         error: null,

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/herodex/static/css/main.0f211026.css",
+    "main.js": "/herodex/static/js/main.14003907.js",
+    "index.html": "/herodex/index.html",
+    "main.0f211026.css.map": "/herodex/static/css/main.0f211026.css.map",
+    "main.14003907.js.map": "/herodex/static/js/main.14003907.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f211026.css",
+    "static/js/main.14003907.js"
+  ]
+}

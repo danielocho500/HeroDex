@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './heroInfo.css'
 
 export const HeroScreen = ({ data }) => {
@@ -6,7 +6,7 @@ export const HeroScreen = ({ data }) => {
     const { appearance, biography, image, name, powerstats } = data
     
     Object.keys(powerstats).forEach(key => {
-        powerstats[key] = powerstats[key] == "null" ? 10 : powerstats[key];
+        powerstats[key] = powerstats[key] === "null" ? 10 : powerstats[key];
     })
     
 
@@ -18,12 +18,12 @@ export const HeroScreen = ({ data }) => {
                 <img src={image.url} alt={name} className="results__img"/>
 
                 <div className="results__bio">
-                    <p> <span> FullName </span> <br />{(biography["full-name"] != "-") ? biography["full-name"] : "No data"}   </p>
+                    <p> <span> FullName </span> <br />{(biography["full-name"] !== "-") ? biography["full-name"] : "No data"}   </p>
                     <p> <span> Alter Egos </span> <br />{biography["alter-egos"]} </p>
-                    <p> <span> Place of Birth </span> <br /> {(biography["place-of-birth"] != "-") ? biography["place-of-birth"] : "No data"} </p>
-                    <p> <span> First Appearance </span> <br /> {(biography["first-appearance"] != "-") ? biography["first-appearance"] : "No data"} </p>
-                    <p> <span> Publisher </span> <br /> {(biography.publisher != "-") ? biography.publisher : "No data"} </p>
-                    <p> <span> Alignment </span> <br /> {(biography.alignment != "-") ? biography.alignment : "No data"} </p>
+                    <p> <span> Place of Birth </span> <br /> {(biography["place-of-birth"] !== "-") ? biography["place-of-birth"] : "No data"} </p>
+                    <p> <span> First Appearance </span> <br /> {(biography["first-appearance"] !== "-") ? biography["first-appearance"] : "No data"} </p>
+                    <p> <span> Publisher </span> <br /> {(biography.publisher !== "-") ? biography.publisher : "No data"} </p>
+                    <p> <span> Alignment </span> <br /> {(biography.alignment !== "-") ? biography.alignment : "No data"} </p>
                 </div>
 
                 <div className="results__appearance">

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { getRandomHeroes } from '../../helpers/getRandomHeroes';
 import { useForm } from '../../hooks/useForm';
 import queryString from 'query-string';
@@ -32,7 +32,7 @@ export const SearchScreen = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if(searchText.trim() == ""){
+        if(searchText.trim() === ""){
             return;
         }
 
@@ -40,14 +40,14 @@ export const SearchScreen = () => {
     }
     
     useEffect(() => {
-        if(q.trim() == "") {
+        if(q.trim() === "") {
             setHeroesCall(getRandomHeroes());
         }
         else{
             fetch(`https://www.superheroapi.com/api.php/2941538746156672/search/${q}`)
                 .then(resp => resp.json())
                 .then(data =>{ 
-                    if(data.response != "error"){
+                    if(data.response !== "error"){
                         setHeroesCall({
                             loading: false,
                             error: null,
@@ -99,7 +99,7 @@ export const SearchScreen = () => {
                                 className='btn btn_search'
                                 value=''
                             > 
-                                <img src='/assets/img/search.svg'/>
+                                <img src='/assets/img/search.svg' alt='search logo' />
 
                             </button>
                         </div>
