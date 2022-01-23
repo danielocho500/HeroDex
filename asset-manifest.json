@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/herodex/static/css/main.0f211026.css",
-    "main.js": "/herodex/static/js/main.ec355edb.js",
+    "main.js": "/herodex/static/js/main.dd6edbef.js",
     "index.html": "/herodex/index.html",
     "main.0f211026.css.map": "/herodex/static/css/main.0f211026.css.map",
-    "main.ec355edb.js.map": "/herodex/static/js/main.ec355edb.js.map"
+    "main.dd6edbef.js.map": "/herodex/static/js/main.dd6edbef.js.map"
   },
   "entrypoints": [
     "static/css/main.0f211026.css",
-    "static/js/main.ec355edb.js"
+    "static/js/main.dd6edbef.js"
   ]
 }
