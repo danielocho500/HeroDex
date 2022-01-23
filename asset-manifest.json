@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/HeroDex/static/css/main.0f211026.css",
+    "main.js": "/HeroDex/static/js/main.14003907.js",
+    "index.html": "/HeroDex/index.html",
+    "main.0f211026.css.map": "/HeroDex/static/css/main.0f211026.css.map",
+    "main.14003907.js.map": "/HeroDex/static/js/main.14003907.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f211026.css",
+    "static/js/main.14003907.js"
+  ]
+}
